@@ -1,3 +1,4 @@
+/* 
 
 .login {
     height: 100vh;
@@ -30,4 +31,252 @@
   .lButton:disabled{
     background-color: #0071c28c;
     cursor: not-allowed;
+  } */
+
+
+
+
+  
+  
+  .main-container {
+    position: relative;
+    height: 100vh; 
+    display: flex;
+    overflow: hidden;
   }
+  
+  .background-image {
+    width: 100%;
+    height: auto;
+    max-height: 100vh; 
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .svg {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .svg img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    
+  }
+  
+
+  .img-logo {
+    position: absolute; 
+    top: 0px;
+    left: 0px;
+  }
+  .img-logo2{
+    position: absolute; 
+    top: 0px;
+    left: 0px;
+    color: white;
+    font-weight: 500;
+    margin-left: 45px;
+    margin-top: 10px;
+    font-size: 25px;
+  }
+
+  
+  .hero-text {
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 2.75rem; 
+    font-family: 'Merriweather Sans', sans-serif;
+    width: 50%;
+    right: 50%;
+    top: 20rem; 
+    text-align: right;
+  
+  }
+  
+  .custom-back-button {
+    position: relative;
+    
+  }
+  .custom-back-button {
+    position: absolute; 
+    color: #FFFFFF; 
+    font-size: 1.25rem; 
+    display: flex; 
+    align-items: center;
+    right: 0; 
+    top: 6rem; 
+    margin-right: 20rem;
+   
+  }
+  
+  .icon-chevron-left {
+    margin-top: 0.25rem; 
+  }
+  
+
+  .homepage-link {
+    font-family: serif; 
+    margin-left: 1rem; 
+   
+  }
+  
+  .custom-popup {
+    background-color: #FFFFFF; 
+    position: absolute; 
+    border-radius: 0.5rem; 
+    top: 3rem;
+    width: 28.125rem; 
+    padding:5px;
+  }
+  
+  .login-register-title {
+    color: #000000; 
+    font-weight: bold; 
+    font-size: 1.5rem;
+    margin: 1.25rem auto; 
+    margin-left: 1.2rem;
+  }
+  
+
+  .email-mobile-label {
+    color: #4B5563;
+    font-size: 0.75rem; 
+    margin-left: 1.25rem; 
+    margin-top: 0.5rem;
+  }
+  
+
+  .custom-input {
+    width: 87%; 
+    padding-top: 0.5rem; 
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem; 
+    padding-right: 0.5rem; 
+    font-size: 1rem; 
+    color: #4A5568; 
+    line-height: 1.5; 
+    margin-top: 0.5rem; 
+    outline: none; 
+    margin-left: 1.2rem;
+  }
+  
+  .custom-input:focus {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); 
+    border-color: #4299E1; 
+  }
+  
+  .custom-continue {
+    background-color: #E2E8F0; 
+    margin-top: 1rem; 
+    margin-left: 1.25rem; 
+    color: #718096;
+    width: 91.666667%; 
+    text-align: center; 
+    font-weight: bold; 
+    padding-top: 0.5rem; 
+    padding-bottom: 0.5rem; 
+    padding-left: 1rem; 
+    padding-right: 0rem; 
+    border-radius: 0.25rem; 
+    display: inline-block; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .custom-continue:hover {
+    background-color: #CBD5E0; 
+  }
+
+  
+  .l-or-r {
+    margin-top: 1rem; 
+    margin-left: 1.25rem; 
+  }
+  
+  .l-or-r hr {
+    border-top-width: 2px; 
+    border-color: #CBD5E0; 
+    width: 100%; 
+    margin-top: 1rem; 
+    margin-right: 0.625rem;
+    height: 0px;
+    margin-bottom: 1rem;
+  }
+  
+  .l-or-r p {
+    width: 66.666667%; 
+    margin-left: 1.25rem; 
+    margin-bottom: 0.625rem; 
+    margin-top: 0.0625rem; 
+    color: #4B5563; 
+    font-size: 1rem;
+  }
+  
+  .l-or-r hr:last-child {
+    margin-right: 1.25rem; 
+  }
+
+  
+.custom-svg {
+  position: absolute; 
+  margin-top: 1.75rem; 
+  margin-right: 0.5rem;
+  left: 5rem; 
+  width: 22px; 
+  height: 22px; 
+}
+
+  .custom-button {
+    background-color: #3b82f6; 
+    margin-top: 1rem; 
+    margin-left: 1.25rem; 
+    color: white; 
+    border: 1px solid #3b82f6; 
+    width: 91.666667%; 
+    text-align: center;
+    font-weight: bold; 
+    padding-top: 0.5rem; 
+    padding-bottom: 0.5rem; 
+    padding-left: 1rem; 
+    padding-right: 1rem; 
+    border-radius: 0.25rem; 
+    display: inline-block; 
+    text-decoration: none; 
+  }
+  .custom-button:hover{
+    background-color: #186ef8;
+  }
+  
+
+  .error {
+    color: red; 
+    display: inline-block; 
+    margin-top: 10px;
+    margin-left: 1.25rem; 
+    font-size:15px;
+
+  }
+  .custom-element {
+    font-size: 0.875rem; 
+    width: 91.666667%;
+    margin-left: 1.25rem; 
+    margin-top: 0.5rem; 
+    height: 5rem; 
+  }
+
+  
+  .custom-text1 {
+    color: #CBD5E0; 
+  }
+  
+
+  .custom-text {
+    color: #3B82F6;
+    font-weight: bold; 
+  }
+  

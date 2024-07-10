@@ -8,9 +8,9 @@ const SearchItem = ({ item }) => {
 
   return (
     <div className="searchItem">
-      {item.photos && item.photos.length > 0 ? (
+      {item.photo && item.photo.length > 0 ? (
         <img
-          src={item.photos[0]}
+          src={item.photo[0]}
           alt={item.name}
           className="siImg"
         />

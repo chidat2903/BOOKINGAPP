@@ -35,16 +35,16 @@ const Reserve = ({ setOpen, hotelId }) => {
 
   // Kiểm tra nếu dates rỗng
   const alldates = dates.length ? getDatesInRange(dates[0].startDate, dates[0].endDate) : [];
-  console.log("All dates:", alldates);
-
-  const isAvailable = (roomNumber) => {
-    const isFound = roomNumber.unavailableDates.some((date) =>
-      alldates.includes(new Date(date).getTime())
-    );
-
-    return !isFound;
-  };
-
+  console.log("All day:", alldates);
+    const isAvailable = (roomNumber) => {
+      const isAllAvailable = roomNumber.unavailableDates.every((datesArray) => {
+        return datesArray.every(date => {
+          const timestamp = new Date(date).getTime();
+          return !alldates.includes(timestamp);
+        });
+      });
+      return isAllAvailable;
+    };
   const handleSelect = (e) => {
     const checked = e.target.checked;
     const value = e.target.value;
@@ -57,7 +57,6 @@ const Reserve = ({ setOpen, hotelId }) => {
   };
 
   const navigate = useNavigate();
-
   const handleClick = async () => {
     console.log("Selected Rooms:", selectedRooms);
     console.log("All Dates:", alldates);

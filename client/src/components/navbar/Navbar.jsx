@@ -10,14 +10,14 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navContainer">
         <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
-          <span className="logo">lamabooking</span>
+          <span className="logo">Lamabooking</span>
         </Link>
         {user ? (
           <span className="navUsername">{user.username}</span>
         ) : (
           <div className="navItems">
-            <button className="navButton">Register</button>
-            <button className="navButton">Login</button>
+            <Link to="/register" style={{ color: "inherit", textDecoration: "none" }}><button className="navButton"><b>Register</b></button></Link>
+            <Link to="/login" style={{ color: "inherit", textDecoration: "none" }}><button className="navButton"><b>Login</b></button></Link>
           </div>
         )}
       </div>

@@ -113,11 +113,11 @@ const Hotel = () => {
               free airport taxi
             </span>
             <div className="hotelImages">
-              {data.photos?.map((photo, i) => (
+              {data.photo?.map((photos, i) => (
                 <div className="hotelImgWrapper" key={i}>
                   <img
                     onClick={() => handleOpen(i)}
-                    src={photo}
+                    src={photos}
                     alt=""
                     className="hotelImg"
                   />
@@ -128,6 +128,11 @@ const Hotel = () => {
               <div className="hotelDetailsTexts">
                 <h1 className="hotelTitle">{data.title}</h1>
                 <p className="hotelDesc">{data.desc}</p>
+                <b className="hotelDesc">Main Facilities: </b>
+                {data.facilities?.map((facilitiess, i) => (
+                  <span className="hotelDesc"> {facilitiess} -</span>
+              ))}
+                
               </div>
               <div className="hotelDetailsPrice">
               <h1>Perfect for a {days} -night stay!</h1>

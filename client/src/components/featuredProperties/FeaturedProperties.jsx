@@ -15,8 +15,8 @@ const FeaturedProperties = () => {
           {data && data.length > 0 ? (
             data.map((item) => (
               <div className="fpItem" key={item._id}>
-                {item.photos && item.photos.length > 0 ? (
-                  <img src={item.photos[0]} alt="" className="fpImg" />
+                {item.photo && item.photo.length > 0 ? (
+                  <img src={item.photo[0]} alt="" className="fpImg" />
                 ) : (
                   <div>No image available</div>
                 )}

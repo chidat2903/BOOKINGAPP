@@ -12,15 +12,20 @@ const List = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [destination, setDestination] = useState(location.state?.destination || "");
+  const [type, setType] = useState(location.state?.typeHotel || "");
   const [dates, setDates] = useState(location.state.dates);
   const [openDate, setOpenDate] = useState(false);
   const [options, setOptions] = useState(location.state?.options || { adult: 1, children: 0, room: 1 });
   const [min, setMin] = useState(undefined);
   const [max, setMax] = useState(undefined);
 
+  // const { data, loading, error, reFetch } = useFetch(
+  //   `/hotels?city=${destination}&min=${min || 0 }&max=${max || 999}`
+  // );
   const { data, loading, error, reFetch } = useFetch(
-    `/hotels?city=${destination}&min=${min || 0 }&max=${max || 999}`
+    destination ? `/hotels?city=${destination}&min=${min || 0}&max=${max || 999}` : `/hotels?type=${type}&min=${min || 0}&max=${max || 999}`
   );
+  
 
   useEffect(() => {
     if (!location.state) {
