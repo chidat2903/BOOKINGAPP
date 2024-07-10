@@ -1,21 +1,10 @@
 import { createContext, useEffect, useReducer } from "react";
 
 const INITIAL_STATE = {
-  user: null,
+  user: JSON.parse(localStorage.getItem("user")) || null,
   loading: false,
   error: null,
 };
-
-const storedUser = localStorage.getItem("user");
-
-if (storedUser) {
-  try {
-    INITIAL_STATE.user = JSON.parse(storedUser);
-  } catch (error) {
-    console.error("Error parsing stored user:", error);
-    // Xử lý lỗi ở đây nếu cần
-  }
-}
 
 export const AuthContext = createContext(INITIAL_STATE);
 
@@ -54,12 +43,7 @@ export const AuthContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AuthReducer, INITIAL_STATE);
 
   useEffect(() => {
-    try {
-      localStorage.setItem("user", JSON.stringify(state.user));
-    } catch (error) {
-      console.error("Error saving user to localStorage:", error);
-      // Xử lý lỗi ở đây nếu cần
-    }
+    localStorage.setItem("user", JSON.stringify(state.user));
   }, [state.user]);
 
   return (
